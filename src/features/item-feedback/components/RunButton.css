@@ -1,0 +1,86 @@
+.run-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.run-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.run-button--run {
+    background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    color: #fff;
+    box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.run-button--run:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 28px var(--accent-glow);
+}
+
+.run-button--run:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.run-button--run:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.run-button--cancel {
+    background: var(--surface-2);
+    color: var(--danger);
+    border: 1px solid var(--danger-bg);
+}
+
+.run-button--cancel:hover {
+    background: var(--danger-bg);
+}
+
+.run-button__icon {
+    font-size: 0.9rem;
+}
+
+/* ─── Progress ─────────────────────────────── */
+.run-button__progress {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.run-button__progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--surface-2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.run-button__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.run-button__progress-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+}

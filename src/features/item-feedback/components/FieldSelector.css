@@ -1,0 +1,91 @@
+.field-selector {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.field-selector__toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 24px;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.field-selector__toggle:hover {
+    background: var(--surface-2);
+}
+
+.field-selector__toggle-icon {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.field-selector__count {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.field-selector__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 24px 20px;
+    animation: fadeSlideIn 0.25s ease;
+}
+
+.field-selector__chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.field-selector__chip:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.field-selector__chip--active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.field-selector__chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    transition: background 0.2s;
+}
+
+.field-selector__chip--active .field-selector__chip-dot {
+    background: #fff;
+}
+
+.field-selector__hint {
+    width: 100%;
+    margin: 4px 0 0;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+}

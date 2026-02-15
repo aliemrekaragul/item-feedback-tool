@@ -1,0 +1,150 @@
+.results-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.results-panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.results-panel__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* ─── Spinner ──────────────────────────────── */
+.results-panel__spinner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.results-panel__spinner-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: spinnerPulse 1s ease infinite;
+}
+
+@keyframes spinnerPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.results-panel__done-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--success);
+}
+
+/* ─── Empty state ──────────────────────────── */
+.results-panel--empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.results-panel__empty-state {
+    text-align: center;
+    max-width: 320px;
+}
+
+.results-panel__empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.results-panel__empty-state h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin: 0 0 8px;
+}
+
+.results-panel__empty-state p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ─── Error ────────────────────────────────── */
+.results-panel__error {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+    background: var(--danger-bg);
+    border: 1px solid var(--danger);
+    border-radius: 12px;
+    animation: fadeSlideIn 0.3s ease;
+}
+
+.results-panel__error p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--danger);
+    line-height: 1.5;
+}
+
+/* ─── Results list ─────────────────────────── */
+.results-panel__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ─── Loading skeleton ─────────────────────── */
+.results-panel__loading-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    background: var(--surface-1);
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.results-panel__pulse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: spinnerPulse 1s ease infinite;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
